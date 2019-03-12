@@ -1,33 +1,239 @@
 .App {
+
+}
+
+.Header {
+  background: steelblue;
+  margin-bottom: 0;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.resizeImageBelow {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.centered {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.top-left {
+  position: absolute;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 1.1em;
+  top: 20%;
+  left: 16px;
+  width: 30%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.top-right {
+  position: absolute;
+  top: 30%;
+  right: 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.callAng {
+  text-decoration: none;
+  color: black;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 1.7em;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11ZYHJIIS-VPdZAhKwXw0rUy9wy-CNyVL-ophOe1X793YIU_f');
+  background-repeat: no-repeat;
+}
+
+.takeoff {
+  color: steelblue;
+  font-size: 7em;
+  font-family: Impact, Charcoal, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resizeImage {
+  width: 50%;
+  heigh: 50%;
+}
+
+.FullForm {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid steelblue;
+  padding: 50px 5px;
+  border-radius: 20px;
+}
+
+.FormItem {
+  margin-top: 20px;
+}
+
+.LabelD {
+  color: 'red';
+  text-align: left;
+  width: 48%;
+  margin-right: 1%;
+  margin-left: 1%
+}
+
+.LabelS {
+  text-align: left;
+  width: 98%;
+  margin: 0 1%;
+}
+
+.LabelSI{
+  text-align: center;
+  width: 98%;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.doubleInput {
+  width: 100%;
+}
+
+.singleInput {
+  width: 100%;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+Input {
+  border-color: 0;
+  height: 40px;
+}
+
+.submitBtn {
+  margin: 20px;
+  margin-bottom: 0;
+  background: steelblue;
+  color: white;
+  width: 15%;
+  height: 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 10px;
+}
+/*-------------------MEDIA QUERIES-------------------*/
+/* Large desktop */
+@media (min-width: 1200px) { }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .resizeImageBelow {
+    width: 120%;
+    height: 120%;
+    margin-bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .LabelD {
+    color: 'red';
+    text-align: left;
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%
+  }
+  Input {
+    border: 1px solid #CAC8C8;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .Header {
+    width: 100%;
+  }
+  .resizeImageBelow {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  .LabelD {
+    color: 'red';
+    text-align: left;
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%
+  }
+  Input {
+    border: 1px solid #CAC8C8;
+  }
+  .top-left {
+    font-size: .9em;
+  }
+  .submitBtn {
+    width: 25%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .Header {
+    width: 100%;
+  }
+  .resizeImageBelow {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  .LabelD {
+    color: 'red';
+    text-align: left;
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%
+  }
+  Input {
+    border: 1px solid #CAC8C8;
+  }
+  .centered {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .top-left {
+    position: absolute;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: .7em;
+    top: 5%;
+    left: 16px;
+    width: 30%;
+    color: white;
+  }
+  .callAng {
+    text-decoration: none;
+    color: black;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11ZYHJIIS-VPdZAhKwXw0rUy9wy-CNyVL-ophOe1X793YIU_f');
+    background-repeat: no-repeat;
+  }
+  .top-right {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+  }
+  .submitBtn {
+    width: 25%;
   }
 }
