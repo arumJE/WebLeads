@@ -373,7 +373,7 @@ Input {
     font-size: 5em;
   }
   .submitBtn {
-    width: 25%;
+    width: 40%;
   }
 }
 /* Landscape phones and down */
@@ -450,6 +450,6 @@ Input {
     font-size: 5em;
   }
   .submitBtn {
-    width: 25%;
+    width: 40%;
   }
 }
