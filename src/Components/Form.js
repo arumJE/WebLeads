@@ -88,7 +88,7 @@ class Form extends Component {
       }]
     };
     //console.log(data);
-    fetch("https://18.217.127.86:6061/submitOnlineWebForm", {
+    fetch("http://18.217.127.86:6061/submitOnlineWebForm", {
       method: "POST",
       mode: "no-cors",
       headers: {
