@@ -71,7 +71,7 @@ class Form extends Component {
   }
 
   handleSubmit(e){
-    //e.preventDefault();
+    e.preventDefault();
     var data = {"lead":
       [{
         "fname": this.state.fname,
@@ -87,12 +87,14 @@ class Form extends Component {
         "terms": this.state.terms,
       }]
     };
-    // console.log(data);
-    fetch("18.217.127.86:6061/submitOnlineWebForm", {
+    //console.log(data);
+    fetch("https://18.217.127.86:6061/submitOnlineWebForm", {
       method: "POST",
+      mode: "no-cors",
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       },
       body:  JSON.stringify(data)
     })
@@ -100,9 +102,12 @@ class Form extends Component {
       return response.json();
     })
     .then(function(data){
-      window.location.reload();
-      //console.log(data)
+
+    })
+    .catch(function(err){
+      console.log(err);
     });
+    window.location.reload();
   }
 
   render() {
