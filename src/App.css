@@ -13,6 +13,9 @@
   height: 100%;
   margin-bottom: 20px;
 }
+a:visited {
+  text-decoration: none;
+}
 a:hover {
   text-decoration: none;
 }
@@ -346,7 +349,7 @@ Input {
   .top-left {
     font-family: Impact, Charcoal, sans-serif;
     position: absolute;
-    top: 34%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -357,23 +360,22 @@ Input {
     text-decoration: none;
     color: black;
     font-family: Impact, Charcoal, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 15px;
     border-radius: 12px;
     font-weight: bold;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11ZYHJIIS-VPdZAhKwXw0rUy9wy-CNyVL-ophOe1X793YIU_f');
-    background-repeat: no-repeat;
   }
-  a:hover {
-    text-decoration: none;
-  }
-  .top-right {
+
+  /* .top-right {
     position: absolute;
+    width: 20%;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11ZYHJIIS-VPdZAhKwXw0rUy9wy-CNyVL-ophOe1X793YIU_f');
+    background-repeat: no-repeat;
+  } */
   .takeoff {
     font-size: 5em;
   }
