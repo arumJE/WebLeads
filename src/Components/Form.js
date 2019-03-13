@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Dropdown from 'react-dropdown';
@@ -72,7 +71,7 @@ class Form extends Component {
   }
 
   handleSubmit(e){
-    e.preventDefault();
+    //e.preventDefault();
     var data = {"lead":
       [{
         "fname": this.state.fname,
@@ -88,18 +87,22 @@ class Form extends Component {
         "terms": this.state.terms,
       }]
     };
-    console.log(data);
-    // fetch("https://....", {
-    //   method: "POST",
-    //   headers: headers,
-    //   body:  JSON.stringify(data)
-    // })
-    // .then(function(response){
-    //   return response.json();
-    // })
-    // .then(function(data){
-    //   console.log(data)
-    // });
+    // console.log(data);
+    fetch("18.217.127.86:6061/submitOnlineWebForm", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body:  JSON.stringify(data)
+    })
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data){
+      window.location.reload();
+      //console.log(data)
+    });
   }
 
   render() {
@@ -117,9 +120,8 @@ class Form extends Component {
       'Call', 'Text', 'Email'
     ];
 
-    const defaultOption = options[0];
     return (
-        <div className="FullForm">
+        <div className="FullForm" id="userForm">
           <form onSubmit={this.handleSubmit}>
             <div className="FormItem">
               <label className="LabelD">
