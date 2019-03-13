@@ -185,7 +185,7 @@ Input {
   .top-left {
     font-family: Impact, Charcoal, sans-serif;
     position: absolute;
-    top: 37%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -205,7 +205,7 @@ Input {
   }
   .top-right {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -264,7 +264,7 @@ Input {
   .top-left {
     font-family: Impact, Charcoal, sans-serif;
     position: absolute;
-    top: 34%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -287,7 +287,7 @@ Input {
   }
   .top-right {
     position: absolute;
-    top: 55%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -349,7 +349,7 @@ Input {
   .top-left {
     font-family: Impact, Charcoal, sans-serif;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -366,16 +366,9 @@ Input {
     font-weight: bold;
   }
 
-  /* .top-right {
-    position: absolute;
-    width: 20%;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11ZYHJIIS-VPdZAhKwXw0rUy9wy-CNyVL-ophOe1X793YIU_f');
-    background-repeat: no-repeat;
-  } */
+  .top-right {
+    top: 40%
+  }
   .takeoff {
     font-size: 5em;
   }
