@@ -111,8 +111,7 @@ a:hover {
 }
 
 Input {
-  border-color: 0;
-  height: 40px;
+  border: 1px solid #CAC8C8;
 }
 
 .submitBtn {
@@ -174,7 +173,7 @@ Input {
     border: 1px solid steelblue;
     font-family: Impact, Charcoal, sans-serif;
     color: white;
-    width: 50%;
+    width: 70%;
     background-color: steelblue;
     font-size: 3em;
     font-family: Impact, Charcoal, sans-serif;
@@ -348,16 +347,16 @@ Input {
     border: 1px solid steelblue;
     font-family: Impact, Charcoal, sans-serif;
     color: white;
-    width: 65%;
+    width: 75%;
     margin: 0 40px;
     background-color: steelblue;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: Impact, Charcoal, sans-serif;
     font-weight: bold;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px;
+    border-radius: 10px;
   }
   .submitBtn {
     width: 40%;

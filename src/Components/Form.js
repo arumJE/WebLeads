@@ -119,7 +119,7 @@ class Form extends Component {
       'Active', 'Prior', 'Never'
     ];
     const optionsThree = [
-      'US Citizen', 'Non-US Citizen', 'Dual Citizen'
+      'US Citizen', 'Non-US Citizen'
     ];
     const optionsFour = [
       'Call', 'Text', 'Email'
