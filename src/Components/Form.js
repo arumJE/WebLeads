@@ -4,6 +4,32 @@ import "react-datepicker/dist/react-datepicker.css";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import * as moment from 'moment';
+import axios from 'axios';
+import mongoose from 'mongoose';
+let mongoDB = 'mongodb://Errin:LetsGoJE@18.217.127.86:27017/onlineWebFormLeads?authSource=admin';
+// mongoose.connect(mongoDB);
+//
+// mongoose.Promise = global.Promise;
+//
+// let db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// const MongoClient = require('mongodb').MongoClient
+//   , assert = require('assert');
+
+// const url = 'mongodb://Errin:LetsGoJE@18.217.127.86:27017/onlineWebFormLeads?authSource=admin';
+
+/// create a connection to the DB
+// var connection = mongoose.createConnection(
+//     'mongodb://Errin:LetsGoJE@18.217.127.86:27017/onlineWebFormLeads?authSource=admin');
+// connection.on('open', function() {
+//     // connection established
+//     new Admin(connection.db).listDatabases(function(err, result) {
+//         console.log('listDatabases succeeded');
+//         // database list stored in result.databases
+//         var allDatabases = result.databases;
+//         console.log(allDatabases);
+//     });
+// });
 
 class Form extends Component {
   constructor(props) {
@@ -29,6 +55,7 @@ class Form extends Component {
     this._onSelectCont = this._onSelectCont.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleDateChange(date) {
@@ -88,18 +115,47 @@ class Form extends Component {
       }]
     };
     //console.log(data);
+    // Database Name
+    const dbName = 'onlineWebFormLeads';
+
+    // Use connect method to connect to the Server
+    // MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
+    //   assert.equal(null, err);
+    //   console.log("Connected successfully to server");
+    //
+    //   const db = client.db(dbName);
+    //   client.close();
+    // });
+    // MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+    //   console.log('DATABASES', db);
+    //   if (err) {console.log(err)};
+    //   //var dbo = db.db("onlineWebFormLeads");
+    //   db.collection("ledger").insertOne(data, function(err, res) {
+    //     if (err) throw err;
+    //     console.log("1 document inserted");
+    //     db.close();
+    //   });
+    // });
+    // axios.post('http://18.217.127.86:6061/submitOnlineWebForm', data)
+    // .then(function (response) {
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
     fetch("http://18.217.127.86:6061/submitOnlineWebForm", {
-      method: "POST",
-      mode: "no-cors",
+      method: 'POST',
+      mode: 'no-cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': 'http://18.217.127.86:6062/'
       },
       body:  JSON.stringify(data)
     })
     .then(function(response){
-      return response.json();
+      console.log(response);
+      // return response.json();
     })
     .then(function(data){
 
@@ -107,7 +163,20 @@ class Form extends Component {
     .catch(function(err){
       console.log(err);
     });
-    window.location.reload();
+    // var headers = {
+    //   'Access-Control-Allow-Origin': '*',
+    //   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+    //   'Accept': 'application/json',
+    //   'Access-Control-Allow-Credentials': 'true',
+    //   'Access-Control-Allow-Origin': 'http://localhost:3001',
+    //   'Content-Type': 'application/json',
+    // }
+    // axios.post('http://18.217.127.86:6061/submitOnlineWebForm',headers, {data})
+    //   .then(res => {
+    //     console.log(res);
+    //     console.log(res.data);
+    //   });
+    //window.location.reload();
   }
 
   render() {
